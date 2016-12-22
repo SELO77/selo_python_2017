@@ -16,8 +16,8 @@ class Vector:
     def __abs__(self):
         return hypot(self.x, self.y) # Return the Euclidean distance, sqrt(x*x + y*y).
 
-
-print(Vector())
+vector = Vector(1, 2)
+print(len(vector))
 
 
 print(memoryview(bytes(123)))
