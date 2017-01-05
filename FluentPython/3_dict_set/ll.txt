@@ -1,0 +1,4 @@
+total 16
+-rw-r--r--  1 SELO  staff   446B  1  5 00:51 3-2dictget.py
+-rw-r--r--  1 SELO  staff     0B  1  5 00:55 ll.txt
+-rw-r--r--  1 SELO  staff   236B  1  4 01:55 note.py
