@@ -13,3 +13,11 @@ print(hash(tf))
 index = collections.defaultdict(list)
 
 str()
+
+
+counter1 = collections.Counter('abaaaaaaaaabbbbbbbcccccc')
+print(counter1)
+order_d = collections.OrderedDict({'name': 'selo', 'age': 'm'})
+print(order_d)
+
+collections.UserDict()
