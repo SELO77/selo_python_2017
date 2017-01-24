@@ -1,0 +1,14 @@
+* duck typing : https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91
+* 동적 속성 접근
+
+* import reprlib
+
+* sequence protocol
+
+
+10.3 protocol and duck typing
+* protocol?
+
+
+10.4.1
+* indices
