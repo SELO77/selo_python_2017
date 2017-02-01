@@ -10,5 +10,3 @@ else:
 print('1', os.environ['MMT_UNIT_TESTING'])
 print('2', os.environ.pop('MMT_UNIT_TESTING'))
 print('3', os.environ['MMT_UNIT_TESTING'])
-
-
