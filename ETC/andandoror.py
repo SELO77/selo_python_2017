@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+
 def condition(msg, boolean):
     print msg, boolean
     return boolean
