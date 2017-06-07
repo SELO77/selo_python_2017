@@ -5,6 +5,9 @@ import math
 class Vector2d:
     typecode = 'd'
 
+    class Meta:
+        name = __name__
+
     def __init__(self, x, y):
         self.__x = float(x)
         self.__y = float(y)
