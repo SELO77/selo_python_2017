@@ -22,6 +22,6 @@ s = "SELO"
 if __name__ == '__main__':
     e = Earth()
     print(e.__class__)
-
-
-
+    e.__class__._test = 't!!!!!!!!!!!!!!'
+    print(e.__class__._test)
+    print(e._test)
