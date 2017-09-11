@@ -73,5 +73,4 @@ if __name__ == '__main__':
     numbers.sort(key=sorter)
     print('3: ', numbers)
     print('3.1: ', sorter.found)
-    assert  sorter.found is True
-
+    assert sorter.found is True
