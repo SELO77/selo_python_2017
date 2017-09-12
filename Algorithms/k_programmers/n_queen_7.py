@@ -43,29 +43,52 @@
 ###############################################
 ###############################################
 
+# def n_queen(n):
+#     from itertools import permutations
+#     cols = range(n)
+#     count = 0
+#     for vec in permutations(cols):
+#         # r = set(vec[i]+i for i in cols)
+#         # l = set(vec[i]-i for i in cols)
+#         # print(r, l)
+#         if n == len(set(vec[i]+i for i in cols)) == len(set(vec[i]-i for i in cols)):
+#             count += 1
+#             print(vec)
+#     return count
+
+###############################################
+###############################################
+
+
+###############################################
+###############################################
+#recursive
+
 def n_queen(n):
-    from itertools import permutations
-    cols = range(n)
-    count = 0
-    for vec in permutations(cols):
-        # r = set(vec[i]+i for i in cols)
-        # l = set(vec[i]-i for i in cols)
-        # print(r, l)
-        if n == len(set(vec[i]+i for i in cols)) == len(set(vec[i]-i for i in cols)):
-            count += 1
-            print(vec)
-    return count
+    solutions = [[]]
+    for row in range(n):
+        solutions = (
+            solution+[i+1] for solution in solutions
+            for i in range(n)
+            if not under_attack(i+1, solution)
+        )
+    return solutions
 
-# def board(vec):
-#     print()
 
+def under_attack(col, queens):
+    return col in queens \
+           or any(abs(col - x) == len(queens) - i for i, x in enumerate(queens))
 ###############################################
 ###############################################
-
 
 
 def nQueen(n):
     solutions = n_queen(n)
+    # count = len(solutions)
+    l = list(solutions)
+    # print(len(l))
+    # for answer in solutions: print(list(enumerate(answer, start=1)))
+    return len(l)
     # return len(solutions)
 
 
