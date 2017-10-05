@@ -9,6 +9,3 @@ def perm1(n):
                 yield from sub(i + 1)
                 a[i], a[k] = a[k], a[i]
     yield from sub(0)
-
-
-for u in perm1(3): print(u)
