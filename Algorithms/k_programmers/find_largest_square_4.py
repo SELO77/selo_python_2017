@@ -115,3 +115,24 @@ assert check_square(0, 1, 3, testBoard) == False
 print(findLargestSquare2(testBoard)) # 9
 print(findLargestSquare2(testBoard2)) # 9
 # print(next(findLargestSquare(testBoard))) # 9
+
+
+###################
+###################
+###################
+# fancy answer
+# def findLargestSquare(board):
+#     answer = 1
+#     res = [[1 if x=='O' else 0 for x in y] for y in board]
+#     for y in range(len(board)):
+#         for x in range(len(board[y])):
+#             if board[y][x] == 'O':
+#                 res[y][x] = min(res[y-1][x], res[y-1][x-1], res[y][x-1]) + 1
+#                 if res[y][x] > answer: answer = res[y][x]
+#
+#     return answer ** 2
+
+#아래 코드는 출력을 위한 테스트 코드입니다.
+
+testBoard = [['X','O','O','O','X'],['X','O','O','O','O'],['X','X','O','O','O'],['X','X','O','O','O'],['X','X','X','X','X']]
+print(findLargestSquare(testBoard))
