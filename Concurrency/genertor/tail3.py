@@ -44,12 +44,24 @@ def printer():
         print(line)
 
 
+@coroutine
+def broadcast(targets):
+    print("Start broadcasting")
+    while True:
+        message = (yield )
+        for target in targets:
+            target.send(message)
+
+
 def main():
     filename = sys.argv[1]
-    with open(filename) as f:
-        p = printer()
-        g = grep('python', p)
-        tail_f(f, g)
+    p = printer()
+    with open(filename, 'r') as f:
+        tail_f(f, broadcast([
+            grep('python', p),
+            grep('serim', p),
+            grep('selo', p),
+        ]))
 
 
     # 위 코드 flow
